@@ -14,7 +14,7 @@ app.get("/api/photos", (req, res) => {
 });
 
 app.get("/api/photos/:id", (req, res) => {
-  const item = photos.find(p => p.id === req.params.id);
+  const item = photos.find((p) => p.id === req.params.id);
   if (!item) return res.status(404).json({ message: "Not found" });
   res.json(item);
 });

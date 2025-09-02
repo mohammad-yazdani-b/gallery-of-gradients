@@ -8,9 +8,10 @@ export default function Gallery() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    axios.get("/api/photos")
-      .then(res => setItems(res.data))
-      .catch(err => setError(err?.message || "خطا"))
+    axios
+      .get("/api/photos")
+      .then((res) => setItems(res.data))
+      .catch((err) => setError(err?.message || "خطا"))
       .finally(() => setLoading(false));
   }, []);
 
@@ -19,9 +20,9 @@ export default function Gallery() {
 
   return (
     <div className="grid">
-      {items.map(item => (
-        <PhotoCard key={item.id} item={item} />)
-      )}
+      {items.map((item) => (
+        <PhotoCard key={item.id} item={item} />
+      ))}
     </div>
   );
 }

@@ -9,7 +9,9 @@ export default function App() {
       <header className="header">
         <h1 className="logo">🖼️ گالری گرادینت</h1>
         <nav>
-          <Link className="btn" to="/">خانه</Link>
+          <Link className="btn" to="/">
+            خانه
+          </Link>
         </nav>
       </header>
       <Routes>
